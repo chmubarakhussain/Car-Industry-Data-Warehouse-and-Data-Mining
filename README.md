@@ -1,4 +1,4 @@
-# Car-Industry-Data-Warehouse
+# Car-Industry-Data-Warehouse-and-Data-Mining
 This project is about the Car Industry that sells and services (repairs) the cars. We built a sample data Warehouse in MS Visual Studio, imported the data, clean and refined it, and processed it for data mining techniques to get fruitful results. These three business processes are handled by the three systems:
 
 Car Sales Module.

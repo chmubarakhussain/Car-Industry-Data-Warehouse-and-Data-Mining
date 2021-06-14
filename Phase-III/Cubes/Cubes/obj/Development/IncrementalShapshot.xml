@@ -1,0 +1,180 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>Cubes</Database>
+    <Server>.\MSQL</Server>
+    <ConnectionString>Data Source=.\MSQL;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>YMN16fVmi92i1n/6ftsF+UY+5nI=11/22/2019 10:46:24 PM11/22/2019 10:46:24 PM</TimeStamp>
+        <ID>
+          <String>warehouse</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>sayFpR8jszXPf2pjJDegXCXRAkw=11/22/2019 10:55:12 PM11/22/2019 10:55:12 PM</TimeStamp>
+        <ID>
+          <String>Warehouse 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>NwDjdatrwYhLjbWJMf2aAH69xXM=11/22/2019 10:48:05 PM11/22/2019 10:48:05 PM</TimeStamp>
+        <ID>
+          <String>Warehouse</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>sZIZJm5pClp+WBDMvAbRUz8NMYA=11/22/2019 10:56:23 PM11/22/2019 10:56:23 PM</TimeStamp>
+        <ID>
+          <String>Warehouse 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>zMjR1FGQa5nT8O7NZIwBhEhVYlU=11/26/2019 6:38:23 PM11/26/2019 6:38:22 PM</TimeStamp>
+        <ID>
+          <String>Warehouse 2</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>O+oKLMeIZRNcg5fUb3UUV0DEJGA=11/22/2019 10:48:51 PM11/22/2019 10:48:51 PM</TimeStamp>
+        <ID>
+          <String>Car</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Gpj0fYtns2gBz+Ww5kMVcmpMxHM=11/22/2019 10:48:51 PM11/22/2019 10:48:51 PM</TimeStamp>
+        <ID>
+          <String>Car Feature</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>EmYq2dGsELb1/fFca8UNFf31GJE=11/22/2019 10:48:51 PM11/22/2019 10:48:51 PM</TimeStamp>
+        <ID>
+          <String>Customer</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>bQFVcUwvnL06aayW4TbBrNgtC1Q=11/22/2019 10:56:53 PM11/22/2019 10:56:53 PM</TimeStamp>
+        <ID>
+          <String>Car Part</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>1QQcCgCiGYFyE9/VSbHj8exBldM=11/22/2019 10:56:53 PM11/22/2019 10:56:53 PM</TimeStamp>
+        <ID>
+          <String>Part Manufacturer</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>TKK1GZoz0vjsnIwzloq+w19KvdI=11/22/2019 10:56:53 PM11/22/2019 10:56:53 PM</TimeStamp>
+        <ID>
+          <String>Supplier</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>l2j0ENw3Op/s+Ouu2FPfh4lQ9+w=11/22/2019 10:56:53 PM11/22/2019 10:56:53 PM</TimeStamp>
+        <ID>
+          <String>Car Part Sales Fact Table</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>8HV0TNTqLVZM9CvtkJIcDlsQO9k=11/26/2019 6:38:44 PM11/26/2019 6:38:43 PM</TimeStamp>
+        <ID>
+          <String>Customer Preference</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>gEWkjJEt113meX1/ggZ7GuQVd48=11/26/2019 6:38:44 PM11/26/2019 6:38:43 PM</TimeStamp>
+        <ID>
+          <String>Car Feature 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>PoPJk23+tFVuKbWxLyiwzejZbBs=11/26/2019 6:38:44 PM11/26/2019 6:38:43 PM</TimeStamp>
+        <ID>
+          <String>Car Sold</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>PQRbe2WQhxFLSgLDw7I5OtnGsz4=11/26/2019 6:38:44 PM11/26/2019 6:38:43 PM</TimeStamp>
+        <ID>
+          <String>Address</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>NvkMLj6+BO8klWHQtOqnI0K7eZo=11/26/2019 6:38:44 PM11/26/2019 6:38:43 PM</TimeStamp>
+        <ID>
+          <String>Customer 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>npQ6fymrvHr3b5S70CpRMM5k2c8=11/26/2019 6:38:44 PM11/26/2019 6:38:43 PM</TimeStamp>
+        <ID>
+          <String>Car 1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>2wYpks3ccHx5n8XUO9tmp2HzgZw=11/22/2019 10:53:47 PM11/22/2019 10:48:51 PMLKNc3FjJN94BN2/8ouUnLYm+Jek=11/22/2019 10:48:51 PM11/22/2019 10:48:51 PM</TimeStamp>
+        <ID>
+          <String>carFeature</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>SRmYYuRZKaKQGNwbEdFBn1wDrME=11/22/2019 10:59:20 PM11/22/2019 10:56:53 PMcAphUZ1OgE0h90LnTPBBXuLKcXQ=11/22/2019 10:56:53 PM11/22/2019 10:56:53 PM</TimeStamp>
+        <ID>
+          <String>carPart</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>zKyUIrUyeyxz+UjFg+wyM2WPiF4=11/26/2019 6:38:44 PM11/26/2019 6:38:43 PM3IULtWxp6k+JlaqE0cemtwnHmN8=11/26/2019 6:38:44 PM11/26/2019 6:38:43 PM</TimeStamp>
+        <ID>
+          <String>Warehouse 2</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>EDTE+j/tJWHOiJ4D8sbv/YPMako=11/22/2019 10:45:31 PM11/22/2019 10:45:31 PM</TimeStamp>
+      <ID>
+        <String>Cubes</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2019-11-26T13:38:59.636667Z</LastDeployed>
+</DeploymentSnapshot>

@@ -1,0 +1,625 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="a3023519-69ea-4af0-b8c0-6e23ed52a291" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>CubeOne</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Address</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="d2bec79d-4af9-4b01-8b6e-36d85f083b02">
+          <ID>Address</ID>
+          <Name>Address</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="88e767ce-71d7-45e0-8911-2c07a079e042">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Address</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Base Fact Table</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="3edb310c-4811-45c7-aa52-9cafb72b0a44">
+          <ID>Base Fact Table</ID>
+          <Name>Base Fact Table</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="644b13d3-75ff-4c23-901f-43d4197ecf04">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_BaseFactTable</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Booking Details</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="d36a3367-0a1f-4a9f-ab6c-94be6b0bc5a4">
+          <ID>Booking Details</ID>
+          <Name>Booking Details</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="70be4048-2783-4409-b2c7-9e2289345d58">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_BookingDetails</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Car</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="82fbaf31-ed66-4f24-96df-8d586471c043">
+          <ID>Car</ID>
+          <Name>Car</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="3b9be0a5-3521-41e7-9cd8-1e1c55215151">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Car</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Car Demand Agg Fact Table</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="f0174274-4453-413d-a189-b12239d6c26b">
+          <ID>Car Demand Agg Fact Table</ID>
+          <Name>Car Demand Agg Fact Table</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="25796b0c-acf9-47b0-a3c0-8a8b7949d43a">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Car_Demand_Agg_Fact_Table</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Car Feature</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="8ec99ea0-3567-46b4-8e31-87bf3e10a469">
+          <ID>Car Feature</ID>
+          <Name>Car Feature</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="de3f68aa-cc07-40a3-98eb-8285e41800be">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Car_Feature</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Car Feature Agg Fact Table</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="ec543684-d3b2-423e-b4fe-7350e8e93ad4">
+          <ID>Car Feature Agg Fact Table</ID>
+          <Name>Car Feature Agg Fact Table</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="2dba1257-6916-41f7-9068-c62aefecd7b5">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Car_Feature_Agg_Fact_Table</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Car Part</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="03c6f13d-8cc2-4a56-bd33-f6495af1be5f">
+          <ID>Car Part</ID>
+          <Name>Car Part</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="89b32088-a6f7-4c51-8ccf-8ac429a2d93b">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Car_Part</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Car Part Sales Fact Table</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="e5bec89b-e113-478d-9d05-49708fb4ea68">
+          <ID>Car Part Sales Fact Table</ID>
+          <Name>Car Part Sales Fact Table</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="4897046e-ef54-4130-b821-08d8949e4bf0">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Car_Part_sales_Fact_table</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Car Sale Base Fact Table</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="7209f5b0-703e-4a2b-b262-f3190e5a2c76">
+          <ID>Car Sale Base Fact Table</ID>
+          <Name>Car Sale Base Fact Table</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="27190f32-2d38-416a-8ab3-0f6168f5fbbf">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Car_Sale_Base_Fact_Table</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Car Sold</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="2707b75e-94e9-48b8-8699-e15163053e36">
+          <ID>Car Sold</ID>
+          <Name>Car Sold</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="b14c62b2-35ca-48f6-8b15-b667aeaa9eeb">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Car_Sold</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Customer</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="f9a9f737-2791-4335-a832-8fe72e34358f">
+          <ID>Customer</ID>
+          <Name>Customer</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="1923dd48-4b27-4113-a1c3-bd96565b030e">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Customer</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Customer Preference</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="6ad55fb2-902b-44d4-9a5c-e3c73734cf11">
+          <ID>Customer Preference</ID>
+          <Name>Customer Preference</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="646f7912-6b90-471a-b071-a2993b21a4ce">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Customer_Preference</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Defects</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="5eaddb30-07b1-4878-9f69-e820be22ff07">
+          <ID>Defects</ID>
+          <Name>Defects</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="75cf309c-ec3d-4eb0-b176-8bb78663fa6c">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Defects</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Manufacturer</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="e09633ba-4046-4e5d-afc3-dddfa545ded1">
+          <ID>Manufacturer</ID>
+          <Name>Manufacturer</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="11128afb-af1d-4661-83b0-f6f26bf058d4">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Manufacturer</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Manufacturer Aggregate Fact</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="589d4ab6-0030-4964-8028-3e5a1021ad88">
+          <ID>Manufacturer Aggregate Fact</ID>
+          <Name>Manufacturer Aggregate Fact</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="a9d5c204-684e-4fab-9b7f-94f807b8b9ff">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_ManufacturerAggregateFact</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Mechanic</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="d8c0635c-9d93-4c40-b56e-1c9a573c913b">
+          <ID>Mechanic</ID>
+          <Name>Mechanic</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="b2de378b-a61e-4371-8851-d27376cb9a58">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Mechanic</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Mechanic Aggregate Fact</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="7f967d4c-cf90-44d8-bed3-bdd181b85c19">
+          <ID>Mechanic Aggregate Fact</ID>
+          <Name>Mechanic Aggregate Fact</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="2148f0ed-c6d3-4333-87d7-f2c7426c2c6f">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_MechanicAggregateFact</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Model</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="054abef8-42cd-4e01-af8c-a34e6d5a0ba4">
+          <ID>Model</ID>
+          <Name>Model</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="0d6fd4fb-ef3f-43f2-b637-235975b1a436">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Model</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Part Demand By Car Model Wise Agg Fact Table</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="c28ca94b-8831-4eec-a736-b8e7aea6e49c">
+          <ID>Part Demand By Car Model Wise Agg Fact Table</ID>
+          <Name>Part Demand By Car Model Wise Agg Fact Table</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="4d7f416d-cfe7-4231-9076-8ed8f795edbb">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Part_Demand_by_Car_Model_Wise_Agg_Fact_Table</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Part Manufacturer</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="75d3b001-1be7-4323-9415-b7d6669220e4">
+          <ID>Part Manufacturer</ID>
+          <Name>Part Manufacturer</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="c3f84a8d-5b80-48aa-878c-97030bda892e">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Part_manufacturer</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Parts Ordered</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="299ca868-9803-4ca1-a9de-e6aa2a996efb">
+          <ID>Parts Ordered</ID>
+          <Name>Parts Ordered</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="4ab04a9f-337a-4882-8290-3992731602cb">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_PartsOrdered</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Province</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="efc27093-7ecf-46b5-8cb4-24cb73df072e">
+          <ID>Province</ID>
+          <Name>Province</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="26e52ce6-5563-4176-9f99-5193ac996264">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Province</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Supplier</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="e09d9040-9497-4236-b946-d592f9a2ae78">
+          <ID>Supplier</ID>
+          <Name>Supplier</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="17bf7bb9-449c-45ac-a691-cc2cd1319bc8">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Supplier</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Supplier Wise Aggregate Fact Table</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="5db0b463-d2d3-4fde-8712-c2c02e7ba75e">
+          <ID>Supplier Wise Aggregate Fact Table</ID>
+          <Name>Supplier Wise Aggregate Fact Table</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="7ba06ef0-761b-45f2-b355-b198efcf18a4">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Supplier_Wise_aggregate_fact_table</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vehicle Category</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="7c775c95-1c42-427d-a6a8-6111a6b17346">
+          <ID>Vehicle Category</ID>
+          <Name>Vehicle Category</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="e3a1814e-d83f-4ba6-8d20-7f554ae0847b">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Vehicle_Category</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Zip Code</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="d292e3c0-0d1c-4be5-b45b-a200974d7533">
+          <ID>Zip Code</ID>
+          <Name>Zip Code</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="e9f0c269-e184-4a7e-adfb-98dfa79b6021">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Zip_Code</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Car Part Aggregate Fact</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="6f9b003b-ac88-48dd-88ac-4a64d89f6e3a">
+          <ID>Car Part Aggregate Fact</ID>
+          <Name>Car Part Aggregate Fact</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="d5ebbbd7-3ebb-400f-8ff7-7a3a6567efd8">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_CarPartAggregateFact</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>City</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="f3ff9deb-2872-4de0-9f00-3af7267b1795">
+          <ID>City</ID>
+          <Name>City</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="8feca3ca-1ef1-497b-9c0c-c5d6f9d5633f">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_City</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Contact</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="ee5ecc98-16b0-4ebc-93f6-dd0a9026f272">
+          <ID>Contact</ID>
+          <Name>Contact</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="0d0fd9ac-0b9a-41f0-935c-0072dcef4628">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Contact</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Country</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="1983cf7c-01fe-418f-93e6-7f569cfd61e5">
+          <ID>Country</ID>
+          <Name>Country</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="5330cb23-be08-4baa-9c6a-9be5e514b051">
+            <DataSourceViewID>Warehouse</DataSourceViewID>
+            <TableID>dbo_Country</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

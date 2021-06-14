@@ -1,0 +1,173 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="e8923039-1175-41f9-a253-df40bda0fd6e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Car Part Sales Fact Table</ID>
+  <Name>Car Part Sales Fact Table</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="66b40cd2-6061-428c-939e-cbacdda4a68a">
+    <DataSourceViewID>Warehouse 1</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="a9a8958e-80e6-474d-b1e2-c3ad424cd147">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="3e717b32-90b9-4e2e-aed0-eb138013a041">
+      <ID>Supplier Id</ID>
+      <Name>Supplier Id</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f82e5885-38d3-4e67-928f-05895db52d5d">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="101f6fa3-76ab-4485-b31d-01f5bc6ce585">
+            <TableID>dbo_Car_Part_sales_Fact_table</TableID>
+            <ColumnID>supplier_id</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="bb4fdc66-e56d-4b30-bd84-7b60619bac19">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0448c490-af00-495c-8911-c3735c410a8c">
+            <TableID>dbo_Car_Part_sales_Fact_table</TableID>
+            <ColumnID>car_part_id</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="1006a432-e739-4973-a349-62559e1e7fd6">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="78729f90-e6c9-4a7a-9f72-b747a63240c1">
+            <TableID>dbo_Car_Part_sales_Fact_table</TableID>
+            <ColumnID>part_manufacturer_key</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="514a4ba4-c545-49c2-a329-600135114f3d">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="38d17ad4-94c8-4cf9-81d3-91e24871b851">
+            <TableID>dbo_Car_Part_sales_Fact_table</TableID>
+            <ColumnID>car_id</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="d408578e-c02f-4f89-a1e3-da44d9f83edd">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ca8a19db-ce07-4068-a650-7abd4ca0ca96">
+            <TableID>dbo_Car_Part_sales_Fact_table</TableID>
+            <ColumnID>car_manufacturer_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="dc5bfe75-43bb-4a32-98c4-bf0b41611f32">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="0b8f93e8-bb79-4853-b155-c2ccf0c52897">
+          <TableID>dbo_Car_Part_sales_Fact_table</TableID>
+          <ColumnID>supplier_id</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="2ec82cbd-27ad-41df-bfc0-5b44d16326b7">
+          <AttributeID>Car Part Id</AttributeID>
+          <Name>Car Part Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="be39e36f-8118-48e1-ba5a-6e1f31964c8b">
+          <AttributeID>Part Manufacturer Key</AttributeID>
+          <Name>Part Manufacturer Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7fcaff11-8901-49f3-989a-b313dc3528e0">
+          <AttributeID>Car Part Sales Fact Table - Supplier Id</AttributeID>
+          <Name>Car Part Sales Fact Table - Supplier Id</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="736cd1a9-8240-4bfd-b4ea-1fd0cd917f08">
+      <ID>Car Part Id</ID>
+      <Name>Car Part Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="26507512-a052-4ab7-ab64-784efa38e2d1">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="307105c2-3839-4baf-9d4b-e6b7c737e59c">
+            <TableID>dbo_Car_Part_sales_Fact_table</TableID>
+            <ColumnID>car_part_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="650c8ab1-c146-406e-8a8e-2696324e5e2c">
+      <ID>Part Manufacturer Key</ID>
+      <Name>Part Manufacturer Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5dc36c15-22ab-47c6-b81f-4b484cd69f86">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b8901d33-ba7f-478e-8ebf-ba90e6c67a27">
+            <TableID>dbo_Car_Part_sales_Fact_table</TableID>
+            <ColumnID>part_manufacturer_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="19cac237-5547-409b-bac6-a8e2a63bfffd">
+      <ID>Car Part Sales Fact Table - Supplier Id</ID>
+      <Name>Car Part Sales Fact Table - Supplier Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="163f0327-e06a-434d-91f4-ba69ee2f2a10">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5270524e-0237-4c3e-8c58-286495dc00a6">
+            <TableID>dbo_Car_Part_sales_Fact_table</TableID>
+            <ColumnID>supplier_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

@@ -1,0 +1,395 @@
+
+
+
+GO
+CREATE TABLE Vehicle_Category
+( 
+	vehicle_category_id  integer  NOT NULL PRIMARY KEY ,
+	vehicle_category_desc varchar(20)  NULL 
+)
+go
+
+CREATE TABLE Manufacturer
+( 
+	shortName       nvarchar(20)  NOT NULL PRIMARY KEY ,
+	fullName    varchar(20)  NULL ,
+	manufacturerDesc    varchar(20)  NULL ,
+	vehicle_category_id  integer  NULL 
+)
+go
+
+CREATE TABLE Model
+( 
+	model_id             integer  PRIMARY key ,
+	model_desc           varchar(20)  NULL ,
+	shortName      nvarchar(20)  FOREIGN KEY REFERENCES Manufacturer(shortName)
+)
+go
+
+
+CREATE TABLE Car
+( 
+	car_id               integer  NOT NULL primary key ,
+	car_desc             varchar(20)  NULL ,
+	model_id             integer  NULL FOREIGN KEY REFERENCES Model (model_id)
+)
+go
+
+CREATE TABLE Car_Sold
+( 
+	car_sold_id          integer  NOT NULL PRIMARY key ,
+	agreed_price         integer  NULL ,
+	other_details        char(18)  NULL ,
+	date_sold            char(18)  NULL 
+)
+go
+
+
+
+
+CREATE TABLE Car_Feature
+( 
+	car_feature_id       integer  NOT NULL PRIMARY key ,
+	car_feature_detail   varchar(20)  NULL 
+)
+go
+
+
+
+
+
+CREATE TABLE Car_Preference
+( 
+	car_pref_id          integer  NOT NULL PRIMARY key ,
+	car_pref_desc        varchar(20)  NULL 
+)
+go
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE Country
+( 
+	country_id           integer  NOT NULL PRIMARY KEY ,
+	country_desc         varchar(20)  NULL 
+)
+go
+
+CREATE TABLE Province
+( 
+	state_county_province_id integer  PRIMARY KEY ,
+	state_county_province_desc varchar(20)  NULL ,
+	country_id           integer  NULL 
+)
+go
+
+
+CREATE TABLE City
+( 
+	town_city_id         integer  NOT NULL PRIMARY KEY ,
+	town_city_desc       varchar(20)  NULL ,
+	state_county_province_id integer  NULL 
+
+)
+go
+
+CREATE TABLE Zip_Code
+( 
+	post_zip_id          integer  NOT NULL PRIMARY KEY ,
+	post_zip_desc        varchar(20)  NULL ,
+	town_city_id         integer  NULL 
+)
+GO
+CREATE TABLE Address
+( 
+	address_id           integer  NOT NULL primary key,
+	address_desc         varchar(20)  NULL ,
+	post_zip_id          integer  FOREIGN KEY  REFERENCES Zip_Code (post_zip_id),
+	Address_Line_1       char(18)  NULL ,
+	Address_Line_2       char(18)  NULL ,
+	Address_Line_3       char(18)  NULL ,
+	Address_Line_5       char(18)  NULL 
+)
+
+
+CREATE TABLE Customer
+( 
+	customer_id          integer  NOT NULL PRIMARY KEY ,
+	cell_mobile_phone    varchar(20)  NULL ,
+	email_address        varchar(20)  NULL ,
+	other_details        varchar(20)  NULL 
+)
+go
+
+
+
+
+
+CREATE TABLE Customer_Preference
+( 
+	customer_pref_id     integer  NOT NULL PRIMARY KEY ,
+	customer_pref_desc   varchar(20)  NULL 
+)
+go
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE Preferred_Car_Agg_Fact_Table
+( 
+	customer_id          integer  NOT NULL ,
+	car_id               integer  NOT NULL ,
+	car_pref_id          integer  NOT NULL ,
+	preference           char(18)  NULL ,
+	contribution         integer  NULL 
+	PRIMARY KEY(customer_id  ,car_id  ,car_pref_id)
+)
+go
+
+
+
+
+
+CREATE TABLE Car_Feature_Agg_Fact_Table
+( 
+	customer_id          integer  NOT NULL ,
+	car_id               integer  NOT NULL ,
+	car_feature_id       integer  NOT NULL ,
+	sale                 integer  NULL ,
+	cost                 integer  NULL 
+	PRIMARY KEY(customer_id ,car_id ,car_feature_id)
+)
+go
+
+
+
+
+CREATE TABLE Car_Sale_Base_Fact_Table
+( 
+	customer_id          integer  NOT NULL ,
+	car_id               integer  NOT NULL ,
+	customer_pref_id     integer  NOT NULL ,
+	car_feature_id       integer  NOT NULL ,
+	address_id           integer  NOT NULL ,
+	car_sold_id          integer  NOT NULL ,
+	car_quantity         integer  NULL ,
+	profit_margin        float  NULL ,
+	sale                 integer  NULL ,
+	cost                 integer  NULL 
+	PRIMARY KEY(customer_id  ,car_id  ,customer_pref_id  ,car_feature_id  ,address_id  ,car_sold_id )
+)
+go
+
+
+
+CREATE TABLE Car_Demand_Agg_Fact_Table
+( 
+	customer_id          integer  NOT NULL ,
+	model_id             integer  NOT NULL ,
+	car_pref_id          integer  NOT NULL ,
+	rating               integer  NULL 
+	PRIMARY KEY(customer_id ,model_id,car_pref_id)
+)
+go
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ALTER TABLE Car_Demand_Agg_Fact_Table
+	ADD CONSTRAINT R_19 FOREIGN KEY (customer_id) REFERENCES Customer(customer_id)
+		
+go
+
+
+
+
+ALTER TABLE Car_Demand_Agg_Fact_Table
+	ADD CONSTRAINT R_20 FOREIGN KEY (model_id) REFERENCES Model(model_id)
+		
+go
+
+
+
+
+ALTER TABLE Car_Demand_Agg_Fact_Table
+	ADD CONSTRAINT R_21 FOREIGN KEY (car_pref_id) REFERENCES Car_Preference(car_pref_id)
+		
+go
+
+
+
+
+ALTER TABLE Car_Feature_Agg_Fact_Table
+	ADD CONSTRAINT R_25 FOREIGN KEY (customer_id) REFERENCES Customer(customer_id)
+		
+go
+
+
+
+
+ALTER TABLE Car_Feature_Agg_Fact_Table
+	ADD CONSTRAINT R_26 FOREIGN KEY (car_id) REFERENCES Car(car_id)
+		
+go
+
+
+
+
+ALTER TABLE Car_Feature_Agg_Fact_Table
+	ADD CONSTRAINT R_27 FOREIGN KEY (car_feature_id) REFERENCES Car_Feature(car_feature_id)
+		
+go
+
+
+
+
+ALTER TABLE Car_Sale_Base_Fact_Table
+	ADD CONSTRAINT R_11 FOREIGN KEY (customer_id) REFERENCES Customer(customer_id)
+		
+go
+
+
+
+
+ALTER TABLE Car_Sale_Base_Fact_Table
+	ADD CONSTRAINT R_12 FOREIGN KEY (car_id) REFERENCES Car(car_id)
+		
+go
+
+
+
+
+ALTER TABLE Car_Sale_Base_Fact_Table
+	ADD CONSTRAINT R_13 FOREIGN KEY (customer_pref_id) REFERENCES Customer_Preference(customer_pref_id)
+		
+go
+
+
+
+
+ALTER TABLE Car_Sale_Base_Fact_Table
+	ADD CONSTRAINT R_14 FOREIGN KEY (car_feature_id) REFERENCES Car_Feature(car_feature_id)
+		
+go
+
+
+
+
+ALTER TABLE Car_Sale_Base_Fact_Table
+	ADD CONSTRAINT R_15 FOREIGN KEY (address_id) REFERENCES Address(address_id)
+		
+go
+
+
+
+
+ALTER TABLE Car_Sale_Base_Fact_Table
+	ADD CONSTRAINT R_30 FOREIGN KEY (car_sold_id) REFERENCES Car_Sold(car_sold_id)
+		  
+		
+go
+
+
+
+
+ALTER TABLE City
+	ADD CONSTRAINT R_6 FOREIGN KEY (state_county_province_id) REFERENCES Province(state_county_province_id)
+		  
+		  
+go
+
+
+
+
+ALTER TABLE Manufacturer
+	ADD CONSTRAINT R_16 FOREIGN KEY (vehicle_category_id) REFERENCES Vehicle_Category(vehicle_category_id)
+		  
+		  
+go
+
+
+
+
+ALTER TABLE Model
+	ADD CONSTRAINT R_17 FOREIGN KEY (shortName) REFERENCES Manufacturer(shortName)
+		  
+		  
+go
+
+
+
+
+ALTER TABLE Preferred_Car_Agg_Fact_Table
+	ADD CONSTRAINT R_22 FOREIGN KEY (customer_id) REFERENCES Customer(customer_id)
+		  
+		  
+go
+
+
+
+
+ALTER TABLE Preferred_Car_Agg_Fact_Table
+	ADD CONSTRAINT R_23 FOREIGN KEY (car_id) REFERENCES Car(car_id)
+		  
+		  
+go
+
+
+
+
+ALTER TABLE Preferred_Car_Agg_Fact_Table
+	ADD CONSTRAINT R_24 FOREIGN KEY (car_pref_id) REFERENCES Car_Preference(car_pref_id)
+		  
+		  
+go
+
+
+
+
+ALTER TABLE Province
+	ADD CONSTRAINT R_5 FOREIGN KEY (country_id) REFERENCES Country(country_id)
+		  
+		  
+go
+
+
+
+
+ALTER TABLE Zip_Code
+	ADD CONSTRAINT R_8 FOREIGN KEY (town_city_id) REFERENCES City(town_city_id)
+		  
+		  
+go
+
+

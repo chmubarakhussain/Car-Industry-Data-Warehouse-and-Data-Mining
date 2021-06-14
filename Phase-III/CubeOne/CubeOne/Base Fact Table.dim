@@ -1,0 +1,243 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="8ab4a1a5-6dc8-47cc-8624-ac891e02ef28" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Base Fact Table</ID>
+  <Name>Base Fact Table</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="ce9d5989-8925-46a0-8d88-df9277237136">
+    <DataSourceViewID>Warehouse</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="8edebad1-be30-444e-90c0-c1e464e037ab">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="38fcebcf-9e27-4cf7-8b57-a359692e178d">
+      <ID>Contact Id</ID>
+      <Name>Contact Id</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="04c487a2-cbe3-4925-a7b2-bf6f4ca2a193">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8f1df983-92ce-4877-8f75-15bceb857cb4">
+            <TableID>dbo_BaseFactTable</TableID>
+            <ColumnID>ContactId</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="777d9f71-1590-47ab-963a-c2a81c4fcb88">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b3a43788-2ba5-4e9d-96e1-4da759172ce7">
+            <TableID>dbo_BaseFactTable</TableID>
+            <ColumnID>PartId</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="0db2f71c-9d51-4468-94a6-0d77a8bd5bc4">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="dd5c2d71-3540-454f-ad9a-fd292fb4d358">
+            <TableID>dbo_BaseFactTable</TableID>
+            <ColumnID>BookingId</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="07d2e1ac-6e12-4ed5-8b0c-933c55ced4e4">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="be1ef8d2-fd94-408a-b0b4-aceeafc1f560">
+            <TableID>dbo_BaseFactTable</TableID>
+            <ColumnID>MechanicID</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="26bf6c4a-dc78-4b61-b07a-28b8e127a5da">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="055c6821-8aab-4c40-91ab-3e9de3da15fc">
+            <TableID>dbo_BaseFactTable</TableID>
+            <ColumnID>licenseNo</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="354fa385-31b7-4312-bdd7-a5c9d0902d95">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ed22b53d-f6b6-4e58-938d-3677bf12af4f">
+            <TableID>dbo_BaseFactTable</TableID>
+            <ColumnID>defect_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="89e13fdd-99ae-4307-90f1-e8c28797c2d2">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="94df2b12-409d-4490-85e7-093160615cbc">
+          <TableID>dbo_BaseFactTable</TableID>
+          <ColumnID>ContactId</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="09243c66-3553-4869-ac47-c8fa4e8d28e3">
+          <AttributeID>Base Fact Table - Contact Id</AttributeID>
+          <Name>Base Fact Table - Contact Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0be888b4-3fd1-468e-88f9-07e485a62b80">
+          <AttributeID>Booking Id</AttributeID>
+          <Name>Booking Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f35145ec-29c1-4223-8864-2ef8b0b383eb">
+          <AttributeID>Mechanic ID</AttributeID>
+          <Name>Mechanic ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fac3b5f2-b968-4295-9608-deb62753856e">
+          <AttributeID>Defect Id</AttributeID>
+          <Name>Defect Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="98ed9788-edcc-422d-ac94-b413d495ed66">
+          <AttributeID>Part Id</AttributeID>
+          <Name>Part Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5c44db6c-3c6d-4484-a434-5cc25a5d24a8">
+          <AttributeID>License No</AttributeID>
+          <Name>License No</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="de336cdd-a74e-462d-b506-1d64611b87be">
+      <ID>Base Fact Table - Contact Id</ID>
+      <Name>Base Fact Table - Contact Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="210ffc7b-49d2-40ae-8abb-065620977a3a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8a5a91cc-338d-4f98-9ba5-e78d83784e44">
+            <TableID>dbo_BaseFactTable</TableID>
+            <ColumnID>ContactId</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="673b82c7-e174-4f00-9a18-bc872679fc1d">
+      <ID>Booking Id</ID>
+      <Name>Booking Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="14cf851e-5dd5-4a1e-94d0-56bed0587d93">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="52809417-d32e-4bd3-aabc-749c95dad7fa">
+            <TableID>dbo_BaseFactTable</TableID>
+            <ColumnID>BookingId</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="dc3fd83c-e319-44f8-a2bb-36de6ddbfe66">
+      <ID>Mechanic ID</ID>
+      <Name>Mechanic ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="80a59ee0-1c28-4b13-9d21-c92d0dded8da">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="00a65e4d-118a-408d-9d55-f61ac6638ad5">
+            <TableID>dbo_BaseFactTable</TableID>
+            <ColumnID>MechanicID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4fe538c4-11f1-4d6b-b6d3-6aabfad953b7">
+      <ID>Defect Id</ID>
+      <Name>Defect Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9e2c1901-7b5c-4790-b3d4-ceb780f30ee2">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d10fd1c8-7ac5-46ac-ab44-862fd83c2367">
+            <TableID>dbo_BaseFactTable</TableID>
+            <ColumnID>defect_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cc441a72-4cdd-4c19-a4dd-88402c9314b2">
+      <ID>Part Id</ID>
+      <Name>Part Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a0d5a363-2ada-4be2-9188-dad3a0071149">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="265247f7-4fcf-4c05-b4a3-4aad3fc6d227">
+            <TableID>dbo_BaseFactTable</TableID>
+            <ColumnID>PartId</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6f669f96-9bc5-407c-9f06-0bbde1023b48">
+      <ID>License No</ID>
+      <Name>License No</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3923fe1c-7cae-4687-9e87-121c95bcf724">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="36f003ea-5ce0-4f46-974a-d951b9b1f1c3">
+            <TableID>dbo_BaseFactTable</TableID>
+            <ColumnID>licenseNo</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
